@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('todo', 'Todocontroller@index');
+Route::post('todo', 'Todocontroller@store');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
